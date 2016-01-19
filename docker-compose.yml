@@ -1,0 +1,23 @@
+test1:
+  image: drgrove/loadbalancer-test
+  environment:
+    APP_HOST: "0.0.0.0"
+    APP_PORT: 8888
+test2:
+  image: drgrove/loadbalancer-test
+  environment:
+    APP_HOST: "0.0.0.0"
+    APP_PORT: 8888
+test3:
+  image: drgrove/loadbalancer-test
+  environment:
+    APP_HOST: "0.0.0.0"
+    APP_PORT: 8888
+nginx:
+  build: ./nginx/.
+  ports:
+    - "80"
+  links:
+    - test1
+    - test2
+    - test3
