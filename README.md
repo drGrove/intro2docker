@@ -22,7 +22,7 @@ docker-compose ps -a
 ```
 
 **NOTE for Mac Users**: You will need to check the IP of your running docker machine to access the API. By default, i've known the IP 
-to be 192.168.99.100. This may be different than youres though.
+to be 192.168.99.100. This may be different than yours though.
 
 Access the Clustered API:
 
